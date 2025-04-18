@@ -1,0 +1,34 @@
+artifact_path: outputs/mlflow-model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.21
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 1.5.1
+metadata:
+  azureml.base_image: mcr.microsoft.com/azureml/curated/ai-ml-automl:19
+  azureml.engine: automl
+mlflow_version: 2.15.1
+model_size_bytes: 4649096
+model_uuid: ecf96982495041f5bdacae72b7a66b96
+run_id: harshit_ml_9
+signature:
+  inputs: '[{"type": "long", "name": "PassengerId", "required": true}, {"type": "long",
+    "name": "Pclass", "required": true}, {"type": "string", "name": "Name", "required":
+    true}, {"type": "string", "name": "Sex", "required": true}, {"type": "double",
+    "name": "Age", "required": true}, {"type": "long", "name": "SibSp", "required":
+    true}, {"type": "long", "name": "Parch", "required": true}, {"type": "string",
+    "name": "Ticket", "required": true}, {"type": "double", "name": "Fare", "required":
+    true}, {"type": "string", "name": "Cabin", "required": true}, {"type": "string",
+    "name": "Embarked", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2025-04-18 10:29:35.989666'
